@@ -80,8 +80,7 @@ int main(int argc, char* argv[]){
 		if(scheduling == RR){   //RR
 			if(running_index > -1 && rr_timer >= QUANTUM){
 				(*enqueue)(running_index);
-				PROCESS_IDLE(process_list[running_index].pid);
-				//printf("%s %d\n" , process_list[running_index].proc_name , process_list[running_index].r_exec_time);			
+				PROCESS_IDLE(process_list[running_index].pid);		
 				running_index = -1;
 			}
 		}
@@ -90,7 +89,6 @@ int main(int argc, char* argv[]){
 			running_index = (*dequeue)();
 			PROCESS_RUN(process_list[running_index].pid);
 			rr_timer = 0;
-			//printf("%s %d\n" , process_list[running_index].proc_name , process_list[running_index].r_exec_time);
 		}
 
 		UNIT_TIME();
