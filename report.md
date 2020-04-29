@@ -13,3 +13,4 @@
     Ubuntu 4.14.176
    
 ## Practice versus theory
+  在TIME_MEASUREMENT.txt測試的時候，start time 和end time差距有時候會突然暴高。
