@@ -13,4 +13,4 @@
     Ubuntu 4.14.176
    
 ## Practice versus theory
-  在TIME_MEASUREMENT.txt測試的時候，start time 和end time差距有時候會突然暴高。
+  在TIME_MEASUREMENT.txt測試的時候，start time 和end time差距有時候會突然暴漲。總體來說，雖然閒置與跑process都是500個unit time，但是實際閒置core的時間會比跑process的還要少。照理來說，core 1(scheduling core)會延遲因為作比較多的operation，造成相反的結果，一種可能是syscall需要花很多時間，延遲了process 結束的時間。
